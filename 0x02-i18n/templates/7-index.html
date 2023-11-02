@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Holberton</title>
+</head>
+<body>
+    <p>
+        {% if g.user %}
+            {% if g.user.timezone %}
+                {{ _('preferred_timezone', timezone=g.user.timezone) }}
+            {% else %}
+                {{ _('default_timezone', timezone=app.config.BABEL_DEFAULT_TIMEZONE) }}
+            {% endif %}
+        {% else %}
+            {{ _('not_logged_in') }}
+        {% endif %}
+    </p>
+</body>
+</html>
+
