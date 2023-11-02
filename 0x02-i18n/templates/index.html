@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Holberton</title>
+</head>
+<body>
+    <p>
+        {% if current_time %}
+            {{ _('current_time_is', current_time=current_time) }}
+        {% else %}
+            {{ _('not_logged_in') }}
+        {% endif %}
+    </p>
+</body>
+</html>
+
