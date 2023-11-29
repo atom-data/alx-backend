@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Install a redis instance
+wget http://download.redis.io/releases/redis-6.0.10.tar.gz
+tar xzf redis-6.0.10.tar.gz
+cd redis-6.0.10
+make
+src/redis-server &
+src/redis-cli ping
+src/redis-cli set Holberton School
+src/redis-cli get Holberton
+ps aux | grep redis-server
